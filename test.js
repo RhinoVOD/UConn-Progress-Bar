@@ -2,13 +2,32 @@ var Twit = require('twit');
 var config = require('./config.js');
 var T = new Twit(config);
 
-tweeter();
+const days = 112;
 
-// Once every N milliseconds
-setInterval(tweeter, 60*5*1000);
+const now = new Date();
 
-function tweeter() {
-    var tweet = 'Here\'s a random number between 0 and 100: ' + Math.floor(Math.random()*100);
+const CronJob = require('cron').CronJob;
+
+var SemesterEnd = new Date('December 15, 2019, 16:00:00');
+
+const diff = now - SemesterEnd;
+
+const oneDay = 1000 * 60 * 60 * 24;
+
+const currentDay = Math.floor(diff/oneDay);
+
+//calculates the current percent of days passed now
+const currentPercent = currentDay / days * 100;
+
+
+//with the use of this cronjob, this function will be used at 8 AM every day
+new CronJob('0 08 * * *', function() {
+    tweeter(currentPercent, barStyle);
+}, null, true, 'UTC');
+
+//the function to create the tweet and post it
+function tweeter(currentPercent) {
+    var tweet = createBar(currentPercent) + ' ' + currentPercent.toFixed(2) + '% of the Uconn semester has passed!';
 
     T.post('statuses/update', { status: tweet }, tweeted);
 
@@ -21,3 +40,15 @@ function tweeter() {
         }
     }
 }
+
+function createBar(percent) {
+    var yearBar = '';
+    for(var i = 5; i < 100; i+= 5) {
+        yearBar = (i < percent) ? yearBar + '▓' : yearBar + '░';
+    }
+
+    return yearBar
+}
+
+
+
