@@ -9,9 +9,9 @@ const semesterEndDate = new Date('December 15, 2019, 16:00:00');
 
 
 //Cronjob to initiate SendTweet function at 8 AM every day
-new CronJob('0 08 * * *', function() {
+new CronJob('0 11 * * *', function() {
     SendTweet();
-}, null, true, 'UTC');
+}, null, true, 'EST');
 
 //Create and post the progress tweet
 function SendTweet() {
