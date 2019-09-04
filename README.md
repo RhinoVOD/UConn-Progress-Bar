@@ -10,6 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 * [Node.js](https://nodejs.org/en/) - JavaScript runtime
 * [Twit](https://www.npmjs.com/package/twit) - Twitter API Client for node
+* [Cron](https://www.npmjs.com/package/cron) - Tool to run code on a schedule
 * [Twitter Developer Account + App](https://developer.twitter.com/) - Requires your own App tokens
 
 ### Installing
