@@ -4,6 +4,7 @@
   "description": "Creates Twitter bot posts for remaining time left in semester.",
   "main": "exampleconfig.js",
   "scripts": {
+    "lint": "standard --fix *.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
