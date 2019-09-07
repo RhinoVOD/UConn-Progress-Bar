@@ -1,6 +1,6 @@
-# Uconn Progress Bar
+# UConn Progress Bar
 
-Inspired by @ProgressBar201X and @year_progress on Twitter, we decided to try something similar but with a UConn twist.
+Inspired by [@ProgressBar201X](https://twitter.com/progressbar201X) and [@year_progress](https://twitter.com/year_progress) on Twitter, we decided to give it a UConn twist.
 
 ## Getting Started
 
@@ -15,7 +15,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-Create your Developer Account from the link above then go [here](https://developer.twitter.com/en/apps) to create an app. Copy the app information from Details -> Keys and tokens to the exampleconfig.js file then rename the file to config.js. Then you can run the project from test.js in an IDE such as WebStorm or in a terminal with `node test.js`.
+1) Create your own [Twitter Developer Account](https://developer.twitter.com/), and [create your own app](https://developer.twitter.com/en/apps).
+2) Copy the app information from Details -> Keys and tokens to `exampleconfig.js`.
+3) Rename the file to `config.js`.
+4) Run the project from `test.js` in an IDE such as WebStorm or in a terminal with `node test.js`.
 
 
 ## Built With
