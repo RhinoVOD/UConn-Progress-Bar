@@ -25,5 +25,8 @@
   "dependencies": {
     "cron": "^1.7.2",
     "twit": "^2.2.11"
+  },
+  "devDependencies": {
+    "standard": "^14.1.0"
   }
 }
