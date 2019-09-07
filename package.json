@@ -1,0 +1,29 @@
+{
+  "name": "uconn-progress-bar",
+  "version": "0.1.0",
+  "description": "Creates Twitter bot posts for remaining time left in semester.",
+  "main": "exampleconfig.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rhino48/UConn-Progress-Bar.git"
+  },
+  "keywords": [
+    "twitter",
+    "tweet",
+    "bot",
+    "time"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rhino48/UConn-Progress-Bar/issues"
+  },
+  "homepage": "https://github.com/Rhino48/UConn-Progress-Bar#readme",
+  "dependencies": {
+    "cron": "^1.7.2",
+    "twit": "^2.2.11"
+  }
+}
