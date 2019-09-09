@@ -6,7 +6,7 @@ const T = new Twit(config)
 /**
  * Creates a CronJob to run the program at 8 AM, every day.
  */
-const CreateCronJob = new CronJob('0 11 * * *', function () {
+new CronJob('0 11 * * *', function () {
   SendTweet()
 }, null, true, 'EST')
 
@@ -53,5 +53,3 @@ function SendTweet () {
     }
   }
 }
-
-CreateCronJob()
