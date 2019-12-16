@@ -4,19 +4,19 @@ const CronJob = require('cron').CronJob
 const T = new Twit(config)
 
 /**
- * Creates a CronJob to run the program at 8 AM, every day.
+ * A CronJob to run the program at 11 AM every Monday, Wednesday, and Friday
  */
-new CronJob('0 11 * * *', function () {
+new CronJob('0 11 * * 1,3,5', function () {
   SendTweet()
 }, null, true, 'EST')
 
 /**
- * Creates the Tweet used for progressing the bar.
+ * Creates the next progress tweet to be posted
  */
 function CreateTweet () {
-  const maxDays = 112
+  const maxDays = 101
   const oneDay = 1000 * 60 * 60 * 24
-  const semesterEndDate = new Date('December 15, 2019, 16:00:00')
+  const semesterEndDate = new Date('May 1, 2020, 13:00:00')
   const currentDate = new Date()
 
   const remainingTime = currentDate - semesterEndDate
@@ -26,7 +26,7 @@ function CreateTweet () {
 }
 
 /**
- * Generates the bar used for progression.
+ * Creates the progress bar
  */
 function CreateBar (percent) {
   let yearBar = ''
@@ -38,7 +38,7 @@ function CreateBar (percent) {
 }
 
 /**
- * Sends the Tweet off to Twitter to be posted.
+ * Sends the Tweet to Twitter to be posted
  */
 function SendTweet () {
   const tweet = CreateTweet()

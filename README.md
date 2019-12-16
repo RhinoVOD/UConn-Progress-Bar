@@ -20,7 +20,7 @@ These instructions will get you a copy of the project up and running on your loc
 1) Create your own [Twitter Developer Account](https://developer.twitter.com/), and [create your own app](https://developer.twitter.com/en/apps).
 2) Copy the app information from Details -> Keys and tokens to `exampleconfig.js`.
 3) Rename the file to `config.js`.
-4) Run the project from `test.js` in an IDE such as WebStorm or in a terminal with `node test.js`.
+4) Run the project from `main.js` in an IDE such as WebStorm or in a terminal with `node main.js`.
 
 ## Built With
 
