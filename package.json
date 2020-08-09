@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/Rhino48/UConn-Progress-Bar#readme",
   "dependencies": {
-    "cron": "^1.7.2",
+    "cron": "^1.8.2",
     "twit": "^2.2.11"
   },
   "devDependencies": {
-    "standard": "^14.1.0"
+    "standard": "^14.3.4"
   }
 }
