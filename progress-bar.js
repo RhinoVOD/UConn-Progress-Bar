@@ -12,11 +12,13 @@ new CronJob('0 11 * * 1,3,5', function () {
 
 /**
  * Creates the next progress tweet to be posted
+ * maxDays: Days between the start and end day
+ * semesterEndDate: Final day of the semester
  */
 function CreateTweet () {
-  const maxDays = 101
+  const maxDays = 98
   const oneDay = 1000 * 60 * 60 * 24
-  const semesterEndDate = new Date('May 1, 2020, 13:00:00')
+  const semesterEndDate = new Date('December 7, 2020, 11:00:00')
   const currentDate = new Date()
 
   const remainingTime = currentDate - semesterEndDate
